@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/antonio/.config/venv/termpdf/bin/python
 # vim:fileencoding=utf-8
 """\
 Usage:
@@ -1132,7 +1132,7 @@ def bib_from_field(field,regex):
 def bib_from_key(citekeys):
     
     field = '$key'
-    regex = '\|'.join(citekeys)
+    regex = '\\|'.join(citekeys)
     regex = '^' + regex + '$'
     return bib_from_field(field,regex)
 
@@ -1825,10 +1825,10 @@ def main(args=sys.argv):
                 setattr(doc, key, state[key])
         bufs.docs += [doc]
 
-    for doc in bufs.docs:
-        if not doc.citekey:
-            doc.citekey = citekey_from_path(doc.filename)
-
+    # for doc in bufs.docs:
+    #     if not doc.citekey:
+    #         doc.citekey = citekey_from_path(doc.filename)
+    #
     doc = bufs.docs[bufs.current]
 
     # load cli settings
@@ -1855,6 +1855,6 @@ def main(args=sys.argv):
 
 if __name__ == '__main__':
     #logging.basicConfig(filename='termpdf.log',level=logging.DEBUG)
-    logging.basicConfig(filename='termpdf.log',level=logging.WARNING)
+    # logging.basicConfig(filename='termpdf.log',level=logging.WARNING)
     main()
 
