@@ -1,4 +1,4 @@
-#!/home/antonio/.config/venv/termpdf/bin/python
+#!/home/antonio/.local/share/virtualenvs/termpdf/bin/python3
 # vim:fileencoding=utf-8
 """\
 Usage:
